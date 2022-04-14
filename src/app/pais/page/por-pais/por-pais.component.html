@@ -15,9 +15,9 @@
 </div>
 
 <hr>
-<div class="alert alert-danger">No se encontro el termino</div>
+<div class="alert alert-danger" *ngIf="isError">No se encontro el termino {{termino}}</div>
 
-<div class="row">
+<div class="row" *ngIf="!isError">
   <div class="col">
     <table class="table table-hover">
       <thead>
