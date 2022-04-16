@@ -16,11 +16,12 @@ countryList : ICountry[] = [];
 
   constructor(private _paisService : PaisService) { }
 
-  buscar(){
-    console.log(this.termino);
+  buscar( termino : string){
+    console.log(termino);
+    this.termino = termino;
     this.isError = false;
 
-    this._paisService.buscarPais(this.termino)
+    this._paisService.buscarPais(termino)
         .subscribe( resp => {
           console.log(resp);
           this.countryList = resp;
