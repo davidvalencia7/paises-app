@@ -8,10 +8,18 @@
       (onDebounce)="sugerencias( $event )"
       placeholder="Buscar pais"
     >
-
     </app-pais-input>
   </div>
 </div>
+
+<ul class="list-group">
+  <li class="list-group-item list-group-item-action" 
+      *ngFor="let pais of paisesSugeridos"
+      (click)="buscar(pais.name.common)"
+  >
+        {{ pais.name.common }}
+  </li>
+</ul>
 
 <hr>
 <div class="alert alert-danger" *ngIf="isError">No se encontro el termino {{termino}}</div>
