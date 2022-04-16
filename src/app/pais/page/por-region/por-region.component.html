@@ -10,12 +10,12 @@
                 'btn-outline-primary': region !== regionActiva 
     }"          -->
     <div class="col">
-        <button class="btn btn-outline-primary" 
-                                          
-                *ngFor="let region of regiones"
-                (click)="activarRegion(region)"
+        <button                            
+            *ngFor="let region of regiones"
+            [class]="getClassCSS(region)"
+            (click)="activarRegion(region)"
         >
-            {{ region }}
+            {{ region | titlecase }}
         </button>
     </div>
 </div>
