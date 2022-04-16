@@ -38,4 +38,11 @@ countryList : ICountry[] = [];
 
   }
 
+  sugerencias ( termino : string) {
+
+    this.isError = false;
+
+
+  }
+
 }
